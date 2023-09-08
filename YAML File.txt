@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: multi-pod-2
+ labels: # lables are used to group similar objects
+  author: sonal
+  app: nginx
+spec:
+ containers:
+  - name: c1
+    image: nginx
+  - name: c2
+    image: tomcat
+  - name: c3
+    image: ubuntu
+    command: ["bash", "-c", "sleep 6000"]
